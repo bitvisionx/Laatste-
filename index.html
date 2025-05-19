@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crypto Tracker</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Tracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Crypto Tracker</h1>
-    <div id="app">
-        <div class="exchange" id="blox">
-            <h2>Blox</h2>
-            <div class="form-section">
-                <select class="coin-select"></select>
-                <input type="number" step="any" placeholder="Hoeveelheid munt" class="amount" />
-                <input type="number" step="any" placeholder="Totale aankoopprijs (€)" class="total-price" />
-                <button class="add-btn">Voeg aankoop toe</button>
-            </div>
-            <div class="holdings"></div>
-        </div>
-
-        <div class="exchange" id="bitvavo">
-            <h2>Bitvavo</h2>
-            <div class="form-section">
-                <select class="coin-select"></select>
-                <input type="number" step="any" placeholder="Hoeveelheid munt" class="amount" />
-                <input type="number" step="any" placeholder="Totale aankoopprijs (€)" class="total-price" />
-                <button class="add-btn">Voeg aankoop toe</button>
-            </div>
-            <div class="holdings"></div>
-        </div>
+  <h1>Crypto Tracker</h1>
+  <div id="app">
+    <div class="exchange" id="blox">
+      <h2>Blox</h2>
+      <div class="form-section">
+        <select class="coin-select"></select>
+        <input type="number" step="any" placeholder="Hoeveelheid munt" class="amount" />
+        <input type="number" step="any" placeholder="Totale aankoopprijs (€)" class="total-price" />
+        <button class="add-btn">Voeg aankoop toe</button>
+      </div>
+      <div class="holdings"></div>
     </div>
-    <script src="script.js"></script>
+
+    <div class="exchange" id="bitvavo">
+      <h2>Bitvavo</h2>
+      <div class="form-section">
+        <select class="coin-select"></select>
+        <input type="number" step="any" placeholder="Hoeveelheid munt" class="amount" />
+        <input type="number" step="any" placeholder="Totale aankoopprijs (€)" class="total-price" />
+        <button class="add-btn">Voeg aankoop toe</button>
+      </div>
+      <div class="holdings"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
