@@ -7,10 +7,10 @@ const fallbackCoins = [
   { id: "livepeer", name: "Livepeer", price: 19.50 }
 ];
 
-function loadCoins() {
+function populateCoinSelects(coins) {
   document.querySelectorAll(".coin-select").forEach(select => {
     select.innerHTML = "";
-    fallbackCoins.forEach(coin => {
+    coins.forEach(coin => {
       const option = document.createElement("option");
       option.value = coin.id;
       option.textContent = coin.name;
@@ -20,8 +20,8 @@ function loadCoins() {
 }
 
 function getPrice(coinId) {
-  const found = fallbackCoins.find(c => c.id === coinId);
-  return found ? found.price : 0;
+  const coin = fallbackCoins.find(c => c.id === coinId);
+  return coin ? coin.price : 0;
 }
 
 function saveData(exchange, data) {
@@ -93,7 +93,7 @@ function setup(exchange) {
 }
 
 window.onload = () => {
-  loadCoins();
+  populateCoinSelects(fallbackCoins);
   setup("blox");
   setup("bitvavo");
 };
