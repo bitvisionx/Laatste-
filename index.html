@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Crypto Tracker Mobiel</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Crypto Tracker</h1>
+    <h1>Crypto Tracker</h1>
+    <div id="app">
+        <div class="exchange" id="blox">
+            <h2>Blox</h2>
+            <div class="form-section">
+                <select class="coin-select"></select>
+                <input type="number" step="any" placeholder="Hoeveelheid munt" class="amount" />
+                <input type="number" step="any" placeholder="Totale aankoopprijs (€)" class="total-price" />
+                <button class="add-btn">Voeg aankoop toe</button>
+            </div>
+            <div class="holdings"></div>
+        </div>
 
-  <div id="form-section">
-    <h2>Nieuwe aankoop toevoegen</h2>
-    <form id="addPurchaseForm">
-      <label for="wallet">Wallet:</label>
-      <select id="wallet" required>
-        <option value="blox">Blox</option>
-        <option value="bitvavo">Bitvavo</option>
-      </select>
-
-      <label for="coin">Munt:</label>
-      <select id="coin" required>
-        <option value="">Laden...</option>
-      </select>
-
-      <label for="amount">Hoeveelheid gekocht:</label>
-      <input type="number" id="amount" step="any" min="0.00001" required />
-
-      <label for="totalInvested">Totale aankoopwaarde (€):</label>
-      <input type="number" id="totalInvested" step="any" min="0.01" required />
-
-      <button type="submit">Toevoegen</button>
-    </form>
-  </div>
-
-  <hr />
-
-  <section id="wallets-section">
-    <h2>Blox</h2>
-    <div id="blox-list" class="wallet-list"></div>
-    <div id="blox-summary" class="wallet-summary"></div>
-
-    <h2>Bitvavo</h2>
-    <div id="bitvavo-list" class="wallet-list"></div>
-    <div id="bitvavo-summary" class="wallet-summary"></div>
-  </section>
-
-  <script src="script.js"></script>
+        <div class="exchange" id="bitvavo">
+            <h2>Bitvavo</h2>
+            <div class="form-section">
+                <select class="coin-select"></select>
+                <input type="number" step="any" placeholder="Hoeveelheid munt" class="amount" />
+                <input type="number" step="any" placeholder="Totale aankoopprijs (€)" class="total-price" />
+                <button class="add-btn">Voeg aankoop toe</button>
+            </div>
+            <div class="holdings"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
